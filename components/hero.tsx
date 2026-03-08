@@ -19,7 +19,7 @@ export function Hero() {
 
             <p className="flex items-center gap-2 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4 text-primary" />
-              {"8871 Sampaloc St. San Antonio Village, Makati City"}
+              {"[Your Clinic Address]"}
             </p>
 
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
