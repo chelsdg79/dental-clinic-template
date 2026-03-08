@@ -19,7 +19,7 @@ export function Navbar() {
           </span>
           <span className="flex items-center gap-1.5">
             <MapPin className="h-3.5 w-3.5" />
-            {"8871 Sampaloc St. Corner Santol St. Brgy. San Antonio, Makati City"}
+            {"[Your Clinic Address]"}
           </span>
         </div>
       </div>
@@ -29,7 +29,7 @@ export function Navbar() {
         <a href="#" className="flex items-center">
           <Image
             src="/images/arco-logo.png"
-            alt="Arco Dental Studio"
+            alt="[Your Clinic Name]"
             width={120}
             height={48}
             className="h-10 w-auto"

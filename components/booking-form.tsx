@@ -58,7 +58,7 @@ export function BookingForm() {
               <div className="flex flex-col gap-1">
                 <span className="text-sm font-medium text-foreground">Address</span>
                 <span className="text-muted-foreground">
-                  {"8871 Sampaloc St. Corner Santol St. Brgy. San Antonio, Makati City"}
+                  {"[Your Clinic Address]"}
                 </span>
               </div>
             </div>

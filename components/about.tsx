@@ -86,7 +86,7 @@ export function About() {
       <div className="pb-20 lg:pb-28">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <p className="font-serif text-2xl sm:text-3xl lg:text-4xl text-primary leading-snug">
-            {"At Arco Dental Studio, "}
+            {"At [Your Clinic Name], "}
             <em>{"clarity replaces fear."}</em>
           </p>
 

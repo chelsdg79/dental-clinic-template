@@ -2,20 +2,20 @@ import { Star } from "lucide-react"
 
 const reviews = [
   {
-    name: "Angelo M.",
-    text: "Skilled, welcoming doctors and a clinic with great ambiance. Your comfort truly comes first!",
+    name: "[Client Name]",
+    text: "[Client Review]",
   },
   {
-    name: "Liana F.",
-    text: "The dentists really took time to assess my case and I did not feel rushed with my procedures. I am excited for my future visits as they help treat my case!",
+    name: "[Client Name]",
+    text: "[Client Review]",
   },
   {
-    name: "Lester Umali",
-    text: "Tried a new clinic for my oral prophylaxis this year, and I'm glad I did! From the get-go, booking an appointment was easy, with little to no waiting time. During the procedure, Doc Ira was very careful and thorough\u2014light-handed and always checking in for any discomfort. He even took extra steps to ensure the cleaning was done thoroughly, which I haven't experienced with other clinics. A free professional consultation was also provided after the cleaning, so I'm now aware of the current gaps in my dental health and can take action moving forward. I'll definitely be coming back for my next oral prophylaxis and other procedures!",
+    name: "[Client Name]",
+    text: "[Client Review]",
   },
   {
-    name: "Hanling You",
-    text: "The staff were very patient and attentive, and the clinic environment was fantastic. The atmosphere was great, and most importantly, the staff were very professional. Thank you so much!",
+    name: "[Client Name]",
+    text: "[Client Review]",
   },
 ]
 
