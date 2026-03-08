@@ -1,6 +1,6 @@
-## Dental Landing Page Template
+## Dental Clinic Landing Page Template
 
-A clean, conversion-focused landing page template designed for **dental clinics and health professionals**. This guide will walk you through what’s included, what you need, how to deploy in minutes, and exactly where to customize the template for your clinic.
+A clean, conversion-focused landing page template designed for **dental clinics and health professionals**. This guide will walk you through what's included, what you need, how to deploy in minutes, and exactly where to customize the template for your clinic.
 
 ---
 
@@ -12,8 +12,8 @@ A clean, conversion-focused landing page template designed for **dental clinics 
 - **Built with Next.js and Tailwind CSS**  
   Fast, SEO-friendly, and easy to deploy on Vercel with zero backend setup.
 
-- **Mobile responsive**  
-  Looks great on phones, tablets, and desktops out of the box.
+- **Fully responsive**  
+  Looks great on mobile, tablet, and desktop out of the box.
 
 - **Easy to customize**  
   Clinic name, address, services, colors, logo, and booking form are all editable in a few clearly labeled files.
@@ -22,7 +22,7 @@ A clean, conversion-focused landing page template designed for **dental clinics 
 
 ## 2. What You Need
 
-To use this template, you’ll need a few free accounts:
+To use this template, you'll need a few free accounts:
 
 - **A free GitHub account**  
   To host the code and connect it to Vercel.
@@ -30,141 +30,149 @@ To use this template, you’ll need a few free accounts:
 - **A free Vercel account**  
   To deploy the site live with one click.
 
-- **A free Tally.so or Calendly account for the booking form**  
-  To collect appointment requests with a hosted form or booking calendar.
+- **A free Tally.so or Calendly account**  
+  To collect real appointment requests via a hosted form or booking calendar.
 
 ---
 
 ## 3. How to Deploy in 5 Steps
 
-You can have your site live in just a few minutes:
+You can have your site live in under 10 minutes:
 
 1. **Fork this repository**  
    - Open this repo on GitHub.  
-   - Click **“Fork”** (top-right) to copy it into your own GitHub account.
+   - Click **"Fork"** (top-right) to copy it into your own GitHub account.
 
 2. **Go to `vercel.com` and log in**  
-   - Sign up with GitHub so Vercel can see your forked repo.
+   - Sign up with GitHub so Vercel can access your forked repo.
 
-3. **Click “Add New Project”**  
-   - In your Vercel dashboard, click **“Add New…” → “Project”**.
+3. **Click "Add New Project"**  
+   - In your Vercel dashboard, click **"Add New…" → "Project"**.
 
 4. **Import your forked repo**  
-   - Choose the forked repository for this template.  
-   - Accept the default settings (no special config needed for a basic deploy).
+   - Select the forked repository.  
+   - Accept the default settings — no special config needed.
 
 5. **Click Deploy — your site is live**  
-   - Vercel will build and deploy your site.  
-   - When it finishes, you’ll get a live URL you can share with patients immediately.
+   - Vercel builds and deploys automatically.  
+   - You'll get a live URL instantly. Connect your own domain anytime.
 
 ---
 
 ## 4. How to Customize
 
-Below are the key places to update your clinic details. You can edit these files directly in your code editor or via GitHub’s web editor.
+Edit files directly in your code editor or via GitHub's web editor (click any file → pencil icon).
 
 ### 4.1 Where to Change Clinic Name
 
-Update the placeholder `[Your Clinic Name]` in these files:
+Search for `[Your Clinic Name]` across the project and replace with your clinic name. It appears in:
 
-- `components/navbar.tsx`  
-  - Used in the logo image `alt` text at the top navigation.
+- `components/navbar.tsx` — logo text in the top navigation
+- `components/footer.tsx` — footer brand name and copyright line
+- `components/about.tsx` — closing statement: "At [Your Clinic Name], [Your Clinic Tagline]"
+- `app/layout.tsx` — page `<title>` tag for SEO
 
-- `components/footer.tsx`  
-  - Shown in the footer brand text.  
-  - Also used in the copyright line.
+### 4.2 Where to Change Clinic Specialty
 
-- `components/about.tsx`  
-  - Used in the closing statement: “At [Your Clinic Name], clarity replaces fear.”
+Search for `[Your Clinic Specialty]` and replace with your specialty (e.g. "General & Cosmetic Dentistry"):
 
-You can find these by searching for `[Your Clinic Name]` in the project.
+- `app/layout.tsx` — used in the page title: `[Your Clinic Name] | [Your Clinic Specialty]`
+- `components/hero.tsx` — specialty tags shown above the headline
 
-### 4.2 Where to Change Address
+### 4.3 Where to Change Address & Hours
 
-Update the placeholder `[Your Clinic Address]` in:
+Search for `[Your Clinic Address]` and `[Your Operating Hours]` and replace across:
 
-- `components/navbar.tsx`  
-  - The small address text in the top info bar.
+- `components/navbar.tsx` — top info bar
+- `components/footer.tsx` — "Visit Us" section
+- `components/booking-form.tsx` — beside the booking form
 
-- `components/footer.tsx`  
-  - The “Visit Us” section showing your clinic address.
+### 4.4 Where to Change CTA Button Text
 
-- `components/booking-form.tsx`  
-  - The address text shown beside the booking form.
+- `components/hero.tsx` — find `[Your CTA Button Text]` and replace with your offer  
+  (e.g. "Book your visit and get 15% OFF" or "Book a Free Consultation")
 
-Search for `[Your Clinic Address]` and replace it with your real clinic address.
+### 4.5 Where to Change Services
 
-### 4.3 Where to Change Services
+All services live in `components/services.tsx` inside a `services` array. Each item has:
 
-All services and bullet points live in:
+- `title` — the service category (e.g. "General Dentistry")
+- `items` — the list of treatments under that category
 
-- `components/services.tsx`
+You can rename, add, or remove services to match your clinic.
 
-Inside this file you’ll see a `services` array, where each service has:
+### 4.6 Where to Change Colors
 
-- `title` — the service category (e.g. “General Dentistry”)  
-- `items` — the individual treatments listed under that category
+Colors are defined as CSS variables in `app/globals.css` under `:root`:
 
-You can:
+- `--primary` — main brand color (navy by default)
+- `--background` — page background
+- `--accent` — accent highlights
 
-- Rename existing services to match your offerings.  
-- Add or remove items in the `items` arrays.  
-- Add or remove entire service objects if you offer more or fewer categories.
+Adjust the HSL values to match your brand. Changes apply site-wide automatically via Tailwind.
 
-### 4.4 Where to Change Colors
+### 4.7 How to Add Your Logo
 
-The main color palette (background, primary, accent, etc.) is defined using CSS variables here:
+In `components/navbar.tsx`, find the logo section and replace the text placeholder with an `Image` component:
 
-- `app/globals.css`
+```tsx
+<Image
+  src="/images/your-logo.png"
+  alt="[Your Clinic Name]"
+  width={120}
+  height={40}
+/>
+```
 
-Look for the `:root` section and its `--primary`, `--background`, `--accent`, etc. values. Adjust these HSL values to match your brand colors. The Tailwind theme in:
+Save your logo file in the `public/images/` folder first.
 
-- `tailwind.config.ts`
+### 4.8 How to Add Your Clinic Photo
 
-maps these CSS variables to Tailwind’s `bg-background`, `text-foreground`, `text-primary`, etc., so your color changes will apply across the entire site.
+In `components/about.tsx`, find the `<Image>` component and replace:
 
-### 4.5 How to Add Your Logo
+```tsx
+src="/images/about-image.jpg"
+alt="[Your clinic photo description]"
+```
 
-The logo in the navbar is controlled here:
+Save your photo in `public/images/` and update the filename to match.
 
-- `components/navbar.tsx`
+### 4.9 How to Connect Your Booking Form
 
-Look for the `Image` component:
+The booking section lives in `components/booking-form.tsx`. Two options:
 
-- `src="/images/arco-logo.png"` → replace this with your own logo path (for example, `/images/your-logo.png`).  
-- Make sure your logo file is saved in the `public/images` folder.
+1. **Keep the built-in form**  
+   Update the copy and labels. Good for a basic demo or marketing site.
 
-You can also adjust the `width` and `height` values to fit your logo’s proportions.
-
-### 4.6 How to Connect Your Booking Form
-
-The booking section lives in:
-
-- `components/booking-form.tsx`
-
-You have two main options:
-
-1. **Use the built-in form (simple mode)**  
-   - Update the text copy, labels, and placeholders to match your clinic.  
-   - Change any wording you like within this file.  
-   - For a basic marketing/demo site, you can keep it as-is.
-
-2. **Connect to Tally.so or Calendly (recommended for real bookings)**  
-   - Create a free form or booking link in **Tally.so** or **Calendly**.  
-   - Copy your form or booking URL.
-   - In `components/booking-form.tsx`, you can:
-     - Turn the **“Book My Visit”** button into a link to your Tally/Calendly URL, or  
-     - Replace the JSX form with the embed code that Tally/Calendly provides.
-
-This lets you collect real booking requests without building your own backend.
+2. **Connect Tally.so or Calendly (recommended)**  
+   - Create a free form at [tally.so](https://tally.so) or booking page at [calendly.com](https://calendly.com)  
+   - Copy your form URL or embed code  
+   - Replace the form JSX with the embed, or change the button to link to your booking URL
 
 ---
 
-## 5. Need Help?
+## 5. Customization Checklist
+
+Before going live, make sure you've updated:
+
+- [ ] `[Your Clinic Name]` — all instances
+- [ ] `[Your Clinic Specialty]` — hero tags + page title
+- [ ] `[Your Clinic Address]` — navbar, footer, booking form
+- [ ] `[Your Operating Hours]` — navbar, footer
+- [ ] `[Your CTA Button Text]` — hero section
+- [ ] `[Your Clinic Tagline]` — about section
+- [ ] `[Your Offer Headline]` / `[Your Offer Subtext]` — offers section
+- [ ] `[Client Name]` / `[Client Review]` — reviews section
+- [ ] Logo image — `public/images/your-logo.png`
+- [ ] Clinic photo — `public/images/about-image.jpg`
+- [ ] Booking form — connected to Tally or Calendly
+
+---
+
+## 6. Need Help?
 
 If you get stuck or want help customizing the template:
 
 > **Reply to your Gumroad receipt and I'll help you get set up.**
 
-I’m happy to assist with deployment, basic customizations, or pointing you to the right files. 
-
+I'm happy to help with deployment, customizations, or pointing you to the right files.
