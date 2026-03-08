@@ -15,7 +15,7 @@ export function Navbar() {
         <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between px-6 py-2 text-sm gap-1 sm:gap-0">
           <span className="flex items-center gap-1.5">
             <Clock className="h-3.5 w-3.5" />
-            {"Tues-Sat 10 AM-6 PM | Sun 11 AM-7 PM"}
+            {"[Your Operating Hours]"}
           </span>
           <span className="flex items-center gap-1.5">
             <MapPin className="h-3.5 w-3.5" />
