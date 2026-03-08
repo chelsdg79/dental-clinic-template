@@ -57,25 +57,25 @@ export function About() {
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
               <p className="text-xl lg:text-2xl leading-relaxed text-foreground">
-                {"We started with one simple idea:"}
+                {"We started with one belief:"}
               </p>
               <p className="font-serif text-2xl lg:text-3xl text-primary italic leading-snug">
-                {"Dental visits shouldn\u2019t feel intimidating."}
+                {"Every patient deserves to feel heard, not rushed."}
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                {"They should feel calm, clear, and personal."}
+                {"Most people avoid the dentist — not because they don't care, but because no one ever took the time to explain things clearly."}
               </p>
             </div>
 
             <div className="flex flex-col gap-4">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                {"Most patients think everything is fine \u2014 not because they don\u2019t care, but because dental issues often start silently."}
+                {"We do things differently."}
               </p>
               <p className="text-lg leading-relaxed text-foreground">
-                {"Tiny cavities, early gum changes, bite shifts. They grow quietly, long before you ever feel them."}
+                {"We listen first. We explain everything. We move at your pace — not ours."}
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                {"That\u2019s why we take time to show you what\u2019s happening: gentle explanations, clear photos, and guidance without judgment."}
+                {"Because a healthy smile starts with a clinic you actually trust."}
               </p>
             </div>
           </div>
@@ -87,7 +87,7 @@ export function About() {
         <div className="mx-auto max-w-3xl px-6 text-center">
           <p className="font-serif text-2xl sm:text-3xl lg:text-4xl text-primary leading-snug">
             {"At [Your Clinic Name], "}
-            <em>{"clarity replaces fear."}</em>
+            <em>{"[Your Clinic Tagline]"}</em>
           </p>
 
           <p className="mt-6 text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
