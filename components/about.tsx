@@ -25,7 +25,7 @@ export function About() {
             <div className="relative w-full h-full min-h-[300px] lg:min-h-0">
               <Image
                 src="/images/teeth-nobg.png"
-                alt="person smiling"
+                alt="[Your clinic image]"
                 fill
                 sizes="(max-width: 1024px) 80vw, 45vw"
                 className="object-cover object-center rounded-2xl"
