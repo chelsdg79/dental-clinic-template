@@ -27,14 +27,7 @@ export function Navbar() {
       {/* Main nav */}
       <nav className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center">
-          <Image
-            src="/images/arco-logo.png"
-            alt="[Your Clinic Name]"
-            width={120}
-            height={48}
-            className="h-10 w-auto"
-            priority
-          />
+         [Your Clinic Name]
         </a>
 
         {/* Desktop links */}
