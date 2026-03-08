@@ -12,7 +12,6 @@ export function About() {
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-primary leading-tight text-balance">
             {"We care about more than just your teeth."}
             <span className="relative inline-block">
-              ours
               <svg
                 className="absolute -inset-x-3 -inset-y-2 w-[calc(100%+1.5rem)] h-[calc(100%+1rem)]"
                 viewBox="0 0 120 60"
