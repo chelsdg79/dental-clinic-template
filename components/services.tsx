@@ -8,7 +8,7 @@ import {
   ShieldCheck,
   Component,
 } from "lucide-react"
-
+// Replace services with your own
 const services = [
   {
     icon: Stethoscope,
