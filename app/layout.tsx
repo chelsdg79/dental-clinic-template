@@ -15,9 +15,9 @@ const dmSerif = DM_Serif_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Dental Clinic | Aesthetic, Clear Aligners & TMJ-Orthodontics',
+  title: '[Your Clinic Name] | [Your Clinic Specialty]',
   description:
-    'Discover your smile\'s potential at our dental clinic in Makati City. Aesthetic dentistry, clear aligners, TMJ-Orthodontics, composite veneers, and gentle child dental care.',
+    '[Your Clinic Description]',
 }
 
 export default function RootLayout({
