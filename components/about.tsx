@@ -63,9 +63,7 @@ export function About() {
                 {"Every patient deserves to feel heard, not rushed."}
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                {"Most people avoid the dentist — not because they don't care,"}
-              </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
+                {"Most people avoid the dentist — not because they don't care,"} <br />
                 {"but because no one ever took the time to explain things clearly."}
               </p>
             </div>
@@ -75,10 +73,8 @@ export function About() {
                 {"We do things differently."}
               </p>
               <p className="text-lg leading-relaxed text-foreground">
-                {"We listen first. We explain everything."}
-              </p>
-              <p className="text-lg leading-relaxed text-foreground">
-                {"We move at your pace — not ours."}
+                {"We listen first. We explain everything."} <br />
+                {"We move at your pace — not ours."} 
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
                 {"Because a healthy smile starts with a clinic you actually trust."}
@@ -97,7 +93,10 @@ export function About() {
           </p>
 
           <p className="mt-6 text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            {"That's why every visit starts with listening. We take time to understand your goals, explain your options, and create a plan that fits your life — not just your teeth."}
+            {"That's why every visit starts with listening. "} <br />
+            {" We take time to understand your goals, explain "} <br />
+            {" your options, and create a plan that fits your "} <br />
+            {" life — not just your teeth."}
           </p>
 
           <svg
