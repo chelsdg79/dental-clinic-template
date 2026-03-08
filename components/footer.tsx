@@ -11,7 +11,7 @@ export function Footer() {
               <span className="font-serif text-lg">[Your Clinic Name]</span>
             </div>
             <p className="text-background/70 leading-relaxed text-sm">
-              {"Discover your smile\u2019s potential with our expert dental care in the heart of Makati City."}
+              {"Helping patients feel confident, comfortable, and cared for — one smile at a time."}
             </p>
           </div>
 
