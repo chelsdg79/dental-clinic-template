@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useEffect, useState } from "react"
+import { useRef, useEffect, useCallback } from "react"
 import { Star, ChevronLeft, ChevronRight } from "lucide-react"
 
 const reviews = [
@@ -14,45 +14,50 @@ const reviews = [
 
 const infiniteReviews = [...reviews, ...reviews, ...reviews]
 
-function getVisibleCards() {
+const GAP = 20
+
+function getVisibleCount() {
   if (typeof window === "undefined") return 3
-  if (window.innerWidth < 640) return 1   // mobile
-  if (window.innerWidth < 1024) return 2  // tablet
-  return 3                                 // desktop
+  if (window.innerWidth < 640) return 1
+  if (window.innerWidth < 1024) return 2
+  return 3
 }
 
 export function Reviews() {
   const scrollRef = useRef<HTMLDivElement>(null)
+  const cardRef = useRef<HTMLDivElement>(null)
   const isScrolling = useRef(false)
-  const [visibleCards, setVisibleCards] = useState(3)
 
-  useEffect(() => {
-    const update = () => {
-      const cards = getVisibleCards()
-      setVisibleCards(cards)
-    }
-    update()
-    window.addEventListener("resize", update)
-    return () => window.removeEventListener("resize", update)
-  }, [])
-
-  // Reset scroll to middle set whenever visibleCards changes
-  useEffect(() => {
+  // Set card widths and initial scroll position
+  const setup = useCallback(() => {
     const el = scrollRef.current
     if (!el) return
-    const gap = 20
-    const cardWidth = (el.offsetWidth - gap * (visibleCards - 1)) / visibleCards
-    el.scrollLeft = (cardWidth + gap) * reviews.length
-  }, [visibleCards])
+
+    const count = getVisibleCount()
+    const containerWidth = el.offsetWidth
+    const cardWidth = (containerWidth - GAP * (count - 1)) / count
+
+    // Set each card's width directly via CSS variable
+    el.style.setProperty("--card-width", `${cardWidth}px`)
+
+    // Jump to middle set (index 6 = reviews.length)
+    el.scrollLeft = (cardWidth + GAP) * reviews.length
+  }, [])
+
+  useEffect(() => {
+    setup()
+    window.addEventListener("resize", setup)
+    return () => window.removeEventListener("resize", setup)
+  }, [setup])
 
   const scroll = (direction: "left" | "right") => {
     const el = scrollRef.current
     if (!el || isScrolling.current) return
     isScrolling.current = true
 
-    const gap = 20
-    const cardWidth = (el.offsetWidth - gap * (visibleCards - 1)) / visibleCards
-    const scrollAmount = cardWidth + gap
+    const count = getVisibleCount()
+    const cardWidth = (el.offsetWidth - GAP * (count - 1)) / count
+    const scrollAmount = cardWidth + GAP
 
     el.scrollBy({
       left: direction === "left" ? -scrollAmount : scrollAmount,
@@ -70,18 +75,11 @@ export function Reviews() {
     }, 350)
   }
 
-  const cardWidthClass =
-    visibleCards === 1
-      ? "w-full"
-      : visibleCards === 2
-      ? "w-[calc((100%-20px)/2)]"
-      : "w-[calc((100%-40px)/3)]"
-
   return (
     <section id="reviews" className="bg-background py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6">
 
-        {/* Centered Header — responsive font sizes */}
+        {/* Centered Header */}
         <div className="text-center mb-14">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">
             Reviews
@@ -107,13 +105,14 @@ export function Reviews() {
           <div className="flex-1 overflow-hidden">
             <div
               ref={scrollRef}
-              className="flex gap-5 overflow-x-hidden"
-              style={{ scrollbarWidth: "none" }}
+              className="flex overflow-x-hidden"
+              style={{ gap: `${GAP}px`, scrollbarWidth: "none" }}
             >
               {infiniteReviews.map((review, index) => (
                 <div
                   key={index}
-                  className={`flex-none ${cardWidthClass} rounded-xl border border-border bg-card px-5 py-5 shadow-sm hover:shadow-md transition-shadow`}
+                  className="flex-none rounded-xl border border-border bg-card px-5 py-5 shadow-sm hover:shadow-md transition-shadow"
+                  style={{ width: "var(--card-width, calc((100% - 40px) / 3))" }}
                 >
                   <div className="flex gap-0.5 mb-3">
                     {Array.from({ length: 5 }).map((_, i) => (
