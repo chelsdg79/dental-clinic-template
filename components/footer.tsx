@@ -28,7 +28,7 @@ export function Footer() {
             </div>
             <div className="flex items-start gap-3 text-sm text-background/70">
               <Clock className="mt-0.5 h-4 w-4 shrink-0 text-background" />
-              <span>{"Tues-Sat 10 AM-6 PM | Sun 11 AM-7 PM"}</span>
+              <span>{"[Your Operating Hours]"}</span>
             </div>
           </div>
 
