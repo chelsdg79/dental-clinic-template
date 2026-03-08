@@ -12,6 +12,7 @@ export function Footer() {
             </div>
             <p className="text-background/70 leading-relaxed text-sm">
               {"Helping patients feel confident, comfortable, and cared for — one smile at a time."}
+              [Your Clinic Tagline]
             </p>
           </div>
 
