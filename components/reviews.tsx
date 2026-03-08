@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useEffect } from "react"
+import { useRef, useEffect, useState } from "react"
 import { Star, ChevronLeft, ChevronRight } from "lucide-react"
 
 const reviews = [
@@ -12,39 +12,55 @@ const reviews = [
   { name: "[Client Name]", text: "[Client Review]" },
 ]
 
-// Triple for infinite loop
 const infiniteReviews = [...reviews, ...reviews, ...reviews]
+
+function getVisibleCards() {
+  if (typeof window === "undefined") return 3
+  if (window.innerWidth < 640) return 1   // mobile
+  if (window.innerWidth < 1024) return 2  // tablet
+  return 3                                 // desktop
+}
 
 export function Reviews() {
   const scrollRef = useRef<HTMLDivElement>(null)
   const isScrolling = useRef(false)
+  const [visibleCards, setVisibleCards] = useState(3)
 
-  // Start in the middle set
+  useEffect(() => {
+    const update = () => {
+      const cards = getVisibleCards()
+      setVisibleCards(cards)
+    }
+    update()
+    window.addEventListener("resize", update)
+    return () => window.removeEventListener("resize", update)
+  }, [])
+
+  // Reset scroll to middle set whenever visibleCards changes
   useEffect(() => {
     const el = scrollRef.current
     if (!el) return
-    // Each card = 1/3 of container, gap = 20px
-    // Middle set starts at index 6 (reviews.length)
-    const cardWidth = (el.offsetWidth - 40) / 3 // 40 = 2 gaps of 20px
-    el.scrollLeft = (cardWidth + 20) * reviews.length
-  }, [])
+    const gap = 20
+    const cardWidth = (el.offsetWidth - gap * (visibleCards - 1)) / visibleCards
+    el.scrollLeft = (cardWidth + gap) * reviews.length
+  }, [visibleCards])
 
   const scroll = (direction: "left" | "right") => {
     const el = scrollRef.current
     if (!el || isScrolling.current) return
     isScrolling.current = true
 
-    const cardWidth = (el.offsetWidth - 40) / 3
-    const scrollAmount = cardWidth + 20
+    const gap = 20
+    const cardWidth = (el.offsetWidth - gap * (visibleCards - 1)) / visibleCards
+    const scrollAmount = cardWidth + gap
 
     el.scrollBy({
       left: direction === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
     })
 
-    // After animation, silently reset to middle set if at edges
     setTimeout(() => {
-      const totalOneSet = (cardWidth + 20) * reviews.length
+      const totalOneSet = scrollAmount * reviews.length
       if (el.scrollLeft < totalOneSet * 0.5) {
         el.scrollLeft += totalOneSet
       } else if (el.scrollLeft > totalOneSet * 2.2) {
@@ -54,33 +70,40 @@ export function Reviews() {
     }, 350)
   }
 
+  const cardWidthClass =
+    visibleCards === 1
+      ? "w-full"
+      : visibleCards === 2
+      ? "w-[calc((100%-20px)/2)]"
+      : "w-[calc((100%-40px)/3)]"
+
   return (
     <section id="reviews" className="bg-background py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6">
 
-        {/* Centered Header */}
+        {/* Centered Header — responsive font sizes */}
         <div className="text-center mb-14">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">
             Reviews
           </p>
-          <h2 className="font-serif text-3xl text-foreground sm:text-4xl">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-foreground">
             What our patients say
           </h2>
         </div>
 
-        {/* Carousel row: arrow | cards | arrow */}
-        <div className="flex items-center gap-4">
+        {/* Carousel: arrow | cards | arrow */}
+        <div className="flex items-center gap-3 sm:gap-4">
 
           {/* Left Arrow */}
           <button
             onClick={() => scroll("left")}
-            className="flex-none h-10 w-10 rounded-full border border-border bg-card flex items-center justify-center shadow-sm hover:bg-primary hover:text-white hover:border-primary transition-all"
+            className="flex-none h-9 w-9 sm:h-10 sm:w-10 rounded-full border border-border bg-card flex items-center justify-center shadow-sm hover:bg-primary hover:text-white hover:border-primary transition-all"
             aria-label="Previous"
           >
             <ChevronLeft className="h-4 w-4" />
           </button>
 
-          {/* Card container — overflow hidden, flex-1 fills remaining space */}
+          {/* Cards container */}
           <div className="flex-1 overflow-hidden">
             <div
               ref={scrollRef}
@@ -90,7 +113,7 @@ export function Reviews() {
               {infiniteReviews.map((review, index) => (
                 <div
                   key={index}
-                  className="flex-none w-[calc((100%-40px)/3)] rounded-xl border border-border bg-card px-6 py-5 shadow-sm hover:shadow-md transition-shadow"
+                  className={`flex-none ${cardWidthClass} rounded-xl border border-border bg-card px-5 py-5 shadow-sm hover:shadow-md transition-shadow`}
                 >
                   <div className="flex gap-0.5 mb-3">
                     {Array.from({ length: 5 }).map((_, i) => (
@@ -118,7 +141,7 @@ export function Reviews() {
           {/* Right Arrow */}
           <button
             onClick={() => scroll("right")}
-            className="flex-none h-10 w-10 rounded-full border border-border bg-card flex items-center justify-center shadow-sm hover:bg-primary hover:text-white hover:border-primary transition-all"
+            className="flex-none h-9 w-9 sm:h-10 sm:w-10 rounded-full border border-border bg-card flex items-center justify-center shadow-sm hover:bg-primary hover:text-white hover:border-primary transition-all"
             aria-label="Next"
           >
             <ChevronRight className="h-4 w-4" />
