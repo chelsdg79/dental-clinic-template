@@ -24,7 +24,7 @@ export function Hero() {
 
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button size="lg" asChild>
-                <a href="#booking">{"Book your visit and [your offer headline]!"}</a>
+                <a href="#booking">{"[Your CTA Button Text]"}</a>
               </Button>
             </div>
           </div>
