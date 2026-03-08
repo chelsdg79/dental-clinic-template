@@ -25,10 +25,10 @@ export function About() {
             <div className="relative w-full h-full min-h-[300px] lg:min-h-0">
               <Image
                 src="/images/teeth-nobg.png"
-                alt="Vintage anatomical illustration of dental molars in a jawbone"
+                alt="person smiling"
                 fill
                 sizes="(max-width: 1024px) 80vw, 45vw"
-                className="object-contain"
+              className="object-cover object-center rounded-2xl"
               />
             </div>
           </div>
