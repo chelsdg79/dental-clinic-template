@@ -11,15 +11,15 @@ export function About() {
           </p>
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-primary leading-tight text-balance">
             {"We care about more than just your teeth."}
-            <span className="relative inline-block">
-            </span>
+            <span className="relative inline-block"></span>
           </h2>
         </div>
       </div>
 
       {/* Two-column: image left, text right */}
       <div className="mx-auto max-w-6xl px-6 pb-20 lg:pb-28">
-        <div className="grid items-stretch gap-12 lg:gap-20 lg:grid-cols-2">
+        <div className="grid items-stretch gap-12 lg:gap-20 grid-cols-1 lg:grid-cols-2">
+          
           {/* Left column - Image */}
           <div className="relative mx-auto w-full max-w-md lg:max-w-none flex items-center justify-center h-full">
             <div className="relative w-full h-full min-h-[300px] lg:min-h-0">
@@ -28,13 +28,13 @@ export function About() {
                 alt="person smiling"
                 fill
                 sizes="(max-width: 1024px) 80vw, 45vw"
-              className="object-cover object-center rounded-2xl"
+                className="object-cover object-center rounded-2xl"
               />
             </div>
           </div>
 
           {/* Right column - Text */}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 text-center lg:text-left">
             <div className="flex flex-col gap-4">
               <p className="text-xl lg:text-2xl leading-relaxed text-foreground">
                 {"We started with one belief:"}
@@ -43,8 +43,7 @@ export function About() {
                 {"Every patient deserves to feel heard, not rushed."}
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                {"Most people avoid the dentist — not because they don't care,"} <br />
-                {"but because no one ever took the time to explain things clearly."}
+                {"Most people avoid the dentist — not because they don't care, but because no one ever took the time to explain things clearly."}
               </p>
             </div>
 
@@ -53,8 +52,7 @@ export function About() {
                 {"We do things differently."}
               </p>
               <p className="text-lg leading-relaxed text-foreground">
-                {"We listen first. We explain everything."} <br />
-                {"We move at your pace — not ours."} 
+                {"We listen first. We explain everything. We move at your pace — not ours."}
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
                 {"Because a healthy smile starts with a clinic you actually trust."}
@@ -73,10 +71,7 @@ export function About() {
           </p>
 
           <p className="mt-6 text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            {"That's why every visit starts with listening. "} <br />
-            {" We take time to understand your goals, explain "} <br />
-            {" your options, and create a plan that fits your "} <br />
-            {" life — not just your teeth."}
+            {"That's why every visit starts with listening. We take time to understand your goals, explain your options, and create a plan that fits your life — not just your teeth."}
           </p>
 
           <svg
