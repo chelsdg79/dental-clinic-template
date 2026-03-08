@@ -10,7 +10,7 @@ export function About() {
             About Us
           </p>
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-primary leading-tight text-balance">
-            {"Every smile has a story. Here\u2019s "}
+            {"We care about more than just your teeth."}
             <span className="relative inline-block">
               ours
               <svg
@@ -63,7 +63,10 @@ export function About() {
                 {"Every patient deserves to feel heard, not rushed."}
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                {"Most people avoid the dentist — not because they don't care, but because no one ever took the time to explain things clearly."}
+                {"Most people avoid the dentist — not because they don't care,"}
+              </p>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                {"but because no one ever took the time to explain things clearly."}
               </p>
             </div>
 
@@ -72,7 +75,10 @@ export function About() {
                 {"We do things differently."}
               </p>
               <p className="text-lg leading-relaxed text-foreground">
-                {"We listen first. We explain everything. We move at your pace — not ours."}
+                {"We listen first. We explain everything."}
+              </p>
+              <p className="text-lg leading-relaxed text-foreground">
+                {"We move at your pace — not ours."}
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
                 {"Because a healthy smile starts with a clinic you actually trust."}
@@ -91,7 +97,7 @@ export function About() {
           </p>
 
           <p className="mt-6 text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            {"That\u2019s why we\u2019re meticulous about planning, detail, and personalized care. So you don\u2019t just get a quick result, you get a smile built to last."}
+            {"That's why every visit starts with listening. We take time to understand your goals, explain your options, and create a plan that fits your life — not just your teeth."}
           </p>
 
           <svg
