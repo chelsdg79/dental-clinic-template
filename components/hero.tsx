@@ -10,7 +10,7 @@ export function Hero() {
           {/* Text content */}
           <div className="flex flex-col gap-6">
             <div className="inline-flex w-fit items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-sm font-medium text-accent-foreground">
-              {"[Your Clinic Name] | [Your Clinic Specialty]"}
+              {"[Specialty 1] • [Specialty 2] • [Specialty 3]"}
             </div>
 
             <h1 className="font-serif text-4xl leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
