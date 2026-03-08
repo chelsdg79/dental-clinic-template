@@ -113,9 +113,8 @@ Adjust the HSL values to match your brand. Changes apply site-wide automatically
 
 ### 4.7 How to Add Your Logo
 
-If you're not comfortable editing code, 
-just reply to your Gumroad receipt and 
-I'll add your logo for you.
+> Not comfortable editing code? Reply to your 
+> Gumroad receipt and I'll add your logo for you.
 
 In `components/navbar.tsx`, find the logo section and replace the text placeholder with an `Image` component:
 
