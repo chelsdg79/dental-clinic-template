@@ -28,7 +28,9 @@ export function Navbar() {
       <nav className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center">
          [Your Clinic Name]
+          
         </a>
+        {/* <img></img> */ }
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
