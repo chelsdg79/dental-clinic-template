@@ -8,10 +8,10 @@ export function OfferBanner() {
           Limited Time Offer
         </p>
         <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-balance">
-          {"Book your visit and get 15% OFF"}
+          {"[Your Offer Headline]"}
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-primary-foreground/90 text-lg leading-relaxed">
-          {"your smile journey for only 15% down! \uD83E\uDDB7"}
+          {"[Your Offer Subtext] \uD83E\uDDB7"}
         </p>
         <div className="mt-8">
           <Button
