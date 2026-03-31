@@ -72,7 +72,7 @@ You can have your site live in under 10 minutes:
 
 ## 4. How to Customize
 
-No coding software needed. 
+No coding software needed.
 You can edit everything directly on GitHub in your browser.
 Just click any file → click the pencil icon → make your changes → click Save.
 
