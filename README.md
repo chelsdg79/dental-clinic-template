@@ -3,6 +3,14 @@
 A clean, conversion-focused landing page template designed for **dental clinics and health professionals**. This guide will walk you through what's included, what you need, how to deploy in minutes, and exactly where to customize the template for your clinic.
 
 ---
+⭐ NOT TECHNICAL? NO PROBLEM.
+
+If any of this feels overwhelming, 
+just reply to your receipt and I'll 
+set it up for you — for free.
+
+Most people are live in 10 minutes. 
+If you get stuck, I've got you. 😊
 
 ## 1. What's Included
 
@@ -114,7 +122,7 @@ Adjust the HSL values to match your brand. Changes apply site-wide automatically
 ### 4.7 How to Add Your Logo
 
 > Not comfortable editing code? Reply to your 
-> Gumroad receipt and I'll add your logo for you.
+> Etsy/Payhip receipt and I'll add your logo for you.
 
 In `components/navbar.tsx`, find the logo section and replace the text placeholder with an `Image` component:
 
