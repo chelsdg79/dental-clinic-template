@@ -47,7 +47,10 @@ To use this template, you'll need a few free accounts:
 
 You can have your site live in under 10 minutes:
 
-1. **Fork this repository**  
+1. **"Copy this project to your account"**
+→ Click the "Fork" button 
+  (top-right of the GitHub page)
+  This creates your own copy.
    - Open this repo on GitHub.  
    - Click **"Fork"** (top-right) to copy it into your own GitHub account.
 
@@ -69,7 +72,9 @@ You can have your site live in under 10 minutes:
 
 ## 4. How to Customize
 
-Edit files directly in your code editor or via GitHub's web editor (click any file → pencil icon).
+No coding software needed. 
+You can edit everything directly on GitHub in your browser.
+Just click any file → click the pencil icon → make your changes → click Save.
 
 ### 4.1 Where to Change Clinic Name
 
