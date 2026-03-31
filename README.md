@@ -176,6 +176,6 @@ Before going live, make sure you've updated:
 
 If you get stuck or want help customizing the template:
 
-> **Reply to your Gumroad receipt and I'll help you get set up.**
+> **Reply to your Etsy/Payhip receipt and I'll help you get set up.**
 
 I'm happy to help with deployment, customizations, or pointing you to the right files.
